@@ -335,7 +335,7 @@ function highlightFilter(filter) {
                             id="select-node"
                             placeholder="Select node..."
                             >
-                                <option selected>Select a Designer</option>
+                                <option selected>Highlight a Designer</option>
                                 
                                     <option value="Asics">Asics</option>
                                 
@@ -3177,7 +3177,7 @@ function highlightFilter(filter) {
                             onchange="updateFilter(value, 'item')"
                             id="select-item"
                         >
-                        <option value="">Select a network item</option>
+                        <option value="">Select an item</option>
                         <option value="edge">Designer community</option>
                         <option value="node">Designer</option>
                     </select>
@@ -3189,7 +3189,7 @@ function highlightFilter(filter) {
                             onchange="updateFilter(value, 'property')"
                             id="select-property"
                         >
-                        <option value="">Select a property...</option>
+                        <option value="">Select "from"</option>
                     </select>
                   </div>
                   <div class="col-3 pb-2">
@@ -3198,11 +3198,11 @@ function highlightFilter(filter) {
                             aria-label="Default select example"
                             id="select-value"
                         >
-                        <option value="">Select designer(s)...</option>
+                        <option value="">Select designer(s)</option>
                     </select>
                   </div>
                   <div class="col-1 pb-2">
-                    <button type="button" class="btn btn-primary btn-block" onclick="highlightFilter(filter);">Filter</button>
+                    <button type="button" class="btn btn-primary btn-block" onclick="highlightFilter(filter);">Apply</button>
                   </div>
                   <div class="col-2 pb-2">
                     <button type="button" class="btn btn-primary btn-block" onclick="clearFilter(true)">Reset Selection</button>
