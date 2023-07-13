@@ -3233,7 +3233,7 @@ function highlightFilter(filter) {
                             onchange="updateFilter(value, 'property')"
                             id="select-property"
                         >
-                        <option value="">Select "from" or "to" (See "Guide").</option>
+                        <option value="">Select "from" or "to" (See Guide).</option>
                     </select>
                   </div>
                   <div class="col-3 pb-2">
@@ -3446,44 +3446,41 @@ function highlightFilter(filter) {
                   // adding nodes and edges to the graph
                   data = {nodes: nodes, edges: edges};
 
-                  var options = {
-    "configure": {
-        "enabled": true,
-        "filter": [
-            "nodes",
-            "edges",
-            "physics"
-        ]
+                  const options = {
+  "nodes": {
+    "borderWidth": null,
+    "borderWidthSelected": null,
+    "opacity": null,
+    "scaling": {
+      "min": 5,
+      "max": 10
     },
-    "edges": {
-        "color": {
-            "inherit": true
-        },
-        "smooth": {
-            "enabled": true,
-            "type": "dynamic"
-        }
+    "size": 16
+  },
+  "edges": {
+    "color": {
+      "inherit": true
     },
-    "interaction": {
-        "dragNodes": false,
-        "hideEdgesOnDrag": false,
-        "hideNodesOnDrag": false
+    "selfReferenceSize": null,
+    "selfReference": {
+      "angle": 0.7853981633974483
     },
-    "physics": {
-        "enabled": true,
-        "stabilization": {
-            "enabled": true,
-            "fit": true,
-            "iterations": 1000,
-            "onlyDynamicEdges": false,
-            "updateInterval": 50
-        }
+    "smooth": {
+      "forceDirection": "none"
     }
+  },
+  "physics": {
+    "enabled": false,
+    "barnesHut": {
+      "springLength": 0,
+      "damping": 1
+    },
+    "maxVelocity": 0,
+    "minVelocity": 0.01
+  }
 };
 
                   
-
-
                   
                   // if this network requires displaying the configure window,
                   // put it in its div
