@@ -3446,40 +3446,40 @@ function highlightFilter(filter) {
                   // adding nodes and edges to the graph
                   data = {nodes: nodes, edges: edges};
 
-                  const options = {
-  "nodes": {
-    "borderWidth": null,
-    "borderWidthSelected": null,
-    "opacity": null,
-    "scaling": {
-      "min": 5,
-      "max": 10
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "nodes",
+            "edges",
+            "physics"
+        ]
     },
-    "size": 16
-  },
-  "edges": {
-    "color": {
-      "inherit": true
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
     },
-    "selfReferenceSize": null,
-    "selfReference": {
-      "angle": 0.7853981633974483
+    "interaction": {
+        "dragNodes": false,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
     },
-    "smooth": {
-      "forceDirection": "none"
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
     }
-  },
-  "physics": {
-    "enabled": false,
-    "barnesHut": {
-      "springLength": 0,
-      "damping": 1
-    },
-    "maxVelocity": 0,
-    "minVelocity": 0.01
-  }
 };
-
                   
                   
                   // if this network requires displaying the configure window,
