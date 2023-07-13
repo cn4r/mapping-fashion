@@ -3282,7 +3282,12 @@ function highlightFilter(filter) {
               var originalNodes;
               var network;
               var container;
-              var options, data;
+              var options = {
+      interaction: {
+        navigationButtons: true,
+        keyboard: true
+      }
+    }, data;
               var filter = {
                   item : '',
                   property : '',
@@ -3467,7 +3472,16 @@ function highlightFilter(filter) {
     "interaction": {
         "dragNodes": false,
         "hideEdgesOnDrag": false,
-        "hideNodesOnDrag": false
+        "hideNodesOnDrag": false, 
+            hover: true,
+            keyboard: {
+                enabled: true,
+                bindToWindow: false
+            },
+            navigationButtons: true,
+            tooltipDelay: 1000000,
+            zoomView: false
+        }
     },
     "physics": {
         "enabled": true,
